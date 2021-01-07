@@ -38,6 +38,8 @@ function setup() {
   
   trex = createSprite(50,180,20,50);
   
+  //trex.debug = true;
+  trex.setCollider("circle",0,0,40)
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
@@ -69,8 +71,8 @@ function setup() {
 }
 
 function draw() {
-  //trex.debug = true;
-  background("blue");
+  
+  background("white");
   text("Score: "+ score, 500,50);
   
   if (gameState===PLAY){
